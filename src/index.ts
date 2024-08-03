@@ -5,14 +5,24 @@ const matches = fs
   .split('\n')
   .map(match => match.split(','));
 
+// const homeTeamWon = 'H';
+// const awayTeamWon = 'A';
+// const draw = 'D';
+
+const MatchResult = {
+  HomeTeamWon: 'H',
+  AwayTeamWon: 'A',
+  Draw: 'D',
+};
+
 let manUnitedWinCount: number = 0;
 
 for (const match of matches) {
-  if (match.at(1) === 'Man United' && match.at(5) === 'H') {
+  if (match.at(1) === 'Man United' && match.at(5) === MatchResult.HomeTeamWon) {
     manUnitedWinCount++;
   }
 
-  if (match.at(2) === 'Man United' && match.at(5) === 'A') {
+  if (match.at(2) === 'Man United' && match.at(5) === MatchResult.AwayTeamWon) {
     manUnitedWinCount++;
   }
 }
