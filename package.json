@@ -1,0 +1,17 @@
+{
+  "name": "stats-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:tsc": "tsc --watch",
+    "start:node": "node --watch build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.0.3",
+    "concurrently": "^8.2.2"
+  }
+}
