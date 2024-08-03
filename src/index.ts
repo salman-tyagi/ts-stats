@@ -9,11 +9,11 @@ const matches = fs
 // const awayTeamWon = 'A';
 // const draw = 'D';
 
-const MatchResult = {
-  HomeTeamWon: 'H',
-  AwayTeamWon: 'A',
-  Draw: 'D',
-};
+enum MatchResult {
+  HomeTeamWon = 'H',
+  AwayTeamWon = 'A',
+  Draw = 'D',
+}
 
 let manUnitedWinCount: number = 0;
 
