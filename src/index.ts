@@ -1,10 +1,8 @@
-import { CsvFileReader } from './CsvFileReader';
+import { MatchReader } from './MatchReader';
 import { MatchResult } from './MatchResult';
 
-const reader = new CsvFileReader('data/football.csv');
+const reader = new MatchReader('data/football.csv');
 reader.readFile();
-
-console.log(reader.data[0][0]);
 
 let manUnitedWinCount: number = 0;
 
