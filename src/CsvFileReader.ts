@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-export class CsvFileReader {
+class CsvFileReader {
   data: string[][] = [];
 
   constructor(public filename: string) {}
@@ -9,8 +9,8 @@ export class CsvFileReader {
     this.data = fs
       .readFileSync(this.filename, 'utf-8')
       .split('\n')
-      .map((row: string): string[] => {
-        return row.split(',');
-      });
+      .map((row: string): string[] => row.split(','));
   }
 }
+
+export default CsvFileReader;

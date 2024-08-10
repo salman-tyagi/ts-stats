@@ -1,19 +1,17 @@
-import { dateStringToDate } from './utils';
-import { MatchResult } from './MatchResult';
-import { MatchData } from './MatchData';
+import MatchResult from './MatchResult';
+import MatchData from './MatchData';
+
+import dateStringToDate from './utils/dateStringToDate';
 
 interface Reader {
   readFile(): void;
   data: string[][];
 }
 
-export class MatchReader {
-  reader: Reader;
+class MatchReader {
   matches: MatchData[] = [];
 
-  constructor(reader: Reader) {
-    this.reader = reader;
-  }
+  constructor(public reader: Reader) {}
 
   load(): void {
     this.reader.readFile();
@@ -30,3 +28,5 @@ export class MatchReader {
     });
   }
 }
+
+export default MatchReader;
